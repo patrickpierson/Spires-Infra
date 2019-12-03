@@ -137,6 +137,9 @@ class AWSFrederickEnv(NetworkBase):
             )
 
             self.add_child_template(aws_frederick_bucket_template)
+        
+        if self.config.get('aws_frederick').get('testing'):
+            print('testing')
 
 if __name__ == '__main__':
     AWSFrederickEnv()
